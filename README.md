@@ -6,7 +6,7 @@
 
 **BrandAI** is an intelligent social media content generator that transforms your ideas into platform-optimized posts using cutting-edge AI. Create engaging, personalized content for multiple platforms in seconds!
 
----
+![Overview](frontend/public/overview.png)
 
 ## ✨ **Features**
 
