@@ -1,64 +1,80 @@
+# 🚀 **NimbuzAI - AI-Driven Social Media Content Generator**
+
+<p align="center">
+  <img src="frontend/public/logo.svg" alt="BrandAI Logo" width="200"/>
+</p>
 
 
-# 🚀 **BrandAI - Social Media Content Generator**
+**NimbuzAI** revolutionizes social media management by transforming your ideas into platform-optimized, engaging posts using cutting-edge AI. From analytics to creative content generation, streamline your social media strategy in one place.
 
-![BrandAI Logo](frontend/public/logo.svg)
-
-**BrandAI** is an intelligent social media content generator that transforms your ideas into platform-optimized posts using cutting-edge AI. Create engaging, personalized content for multiple platforms in seconds!
-
-![Overview](frontend/public/overview.png)
+---
 
 ## ✨ **Features**
 
 ### 🎯 **Multi-Platform Support**
 - **Twitter/X**: Create concise, engaging tweets with optimal hashtags.
 - **LinkedIn**: Craft professional posts with tailored industry insights.
-- **Instagram**: Write visually engaging captions with trending hashtags.
+- **Instagram**: Write visually compelling captions with trending hashtags.
 - **TikTok**: Develop trendy, viral-friendly content.
-- **Facebook**: Generate conversational posts designed to maximize engagement.
+- **Facebook**: Generate conversational posts designed for maximum engagement.
 - **Snapchat**: Produce youthful, snappy, and creative content.
 
 ### 🤖 **AI-Powered Content Transformation**
-- Smart adaptation of content for each platform.
-- Tone customization: Choose professional, casual, or trendy styles.
-- Automatic hashtag and keyword suggestions.
-- Character limit optimization for each platform.
-- Built-in engagement optimization for higher visibility.
+- **Content Adaptation**: Smart optimization for each platform.
+- **Tone Customization**: Choose professional, casual, or trendy styles.
+- **Hashtag & Keyword Suggestions**: Enhance discoverability.
+- **Character Limit Optimization**: Perfect for every platform.
+- **Engagement Optimization**: Maximize reach and visibility.
 
-### 🎤 **Multiple Input Methods**
+### 🎤 **Flexible Input Methods**
 - **Text Input**: Start with written ideas.
-- **Voice-to-Text**: Dictate your thoughts with seamless conversion.
-- **File Uploads**: Process images, videos, or documents into posts.
+- **Voice-to-Text**: Dictate your thoughts seamlessly.
+- **File Uploads**: Transform images, videos, or documents into posts.
 - **PDF Extraction**: Extract content from PDFs for posts.
 
-### 📊 **Analytics Dashboard**
-- Track post performance across platforms.
-- View engagement metrics (likes, shares, comments).
-- Analyze follower growth over time.
-- Gain platform-specific insights and improvement suggestions.
+### 📊 **Comprehensive Analytics Dashboard**
+- **Post Performance Tracking**: Analyze likes, shares, and comments.
+- **Engagement Metrics**: Understand audience behavior.
+- **Follower Growth Analysis**: Track progress over time.
+- **Platform-Specific Insights**: Get actionable improvement suggestions.
+
+### 🖼️ **AI-Generated Visuals**
+- Generate platform-specific visuals using advanced image transformation.
+- Optimize images for formats like Instagram stories, TikTok, and more.
 
 ---
+
+| Overview | Brainstorm | Generate Image |
+|----------|------------|----------------|
+| ![Overview](frontend/public/Overview.png) | ![Overview](frontend/public/Brainstorm.png) | ![Overview](frontend/public/GenerateImage.png) |
+
+| Transform | Schedule Post | Reach |
+|-----------|---------------|-------|
+| ![Overview](frontend/public/Transform.png) | ![Overview](frontend/public/SchedulePost.png) | ![Overview](frontend/public/Reach.png) |
+
+| Analytics | Engagement | Upload |
+|-----------|------------|--------|
+| ![Overview](frontend/public/Analytics.png) | ![Overview](frontend/public/Engagemnet.png) | ![Overview](frontend/public/Upload.png) |
 
 ## 🛠️ **Tech Stack**
 
 ### **Frontend**
-- 🖥️ **Next.js**: React-based framework for scalable, server-rendered applications.
-- 🎨 **Chakra UI**: Component library for modern, responsive UI designs.
-- 🔒 **TypeScript**: Ensures type-safe, scalable frontend code.
-- 🌟 **Google AI (Gemini)**: Leverages cutting-edge AI for content transformation.
-- 🎙️ **React Speech Recognition**: Enables voice-based input.
+- **Next.js**: Scalable, server-rendered applications.
+- **Chakra UI**: Modern, responsive UI designs.
+- **TypeScript**: Type-safe, scalable frontend code.
+- **React Speech Recognition**: Voice-based input functionality.
 
 ### **Backend**
-- 🛠️ **Node.js**: High-performance runtime environment for seamless backend operations.
-- 📊 **PostgreSQL**: Robust relational database for data storage.
-- 🔐 **OAuth2**: Secure social media account authentication.
+- **Node.js**: High-performance runtime environment.
+- **PostgreSQL**: Robust relational database for secure storage.
+- **OAuth2**: Secure social media authentication.
+- **Google AI (Gemini)**: Advanced content transformation.
 
 ---
 
 ## 🚀 **Getting Started**
 
 ### **Prerequisites**
-Before starting, ensure you have the following installed:
 - **Node.js** (v16+)
 - **npm** or **yarn**
 - **PostgreSQL**
@@ -77,7 +93,7 @@ Before starting, ensure you have the following installed:
    ```
 3. Set up environment variables:
    - Create a `.env` file in the root directory.
-   - Add the necessary keys (e.g., database credentials, API keys).
+   - Add database credentials and API keys.
 
 4. Start the development server:
    ```bash
@@ -85,7 +101,6 @@ Before starting, ensure you have the following installed:
    # Or use yarn
    yarn dev
    ```
-
 5. Access the application at `http://localhost:3000`.
 
 ---
@@ -101,16 +116,16 @@ yarn test
 ---
 
 ## 💻 **Usage**
-1. Log in using your social media account (OAuth2-enabled).
+1. Log in using OAuth2-enabled social media accounts.
 2. Select a platform and input your idea (text, voice, or file).
 3. Customize tone, hashtags, and more.
-4. Generate and post optimized content directly to your accounts.
-5. Monitor performance via the analytics dashboard.
+4. Generate and post optimized content directly.
+5. Monitor performance through the analytics dashboard.
 
 ---
 
 ## 🤝 **Contributing**
-We welcome contributions! Please follow these steps:
+We welcome contributions! Follow these steps:
 1. Fork the repository.
 2. Create a new branch:
    ```bash
