@@ -5,13 +5,17 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const { platform } = req.query;
-  const { code } = req.body;
+  const { code } = req.query;
 
   try {
-    // Here you would implement platform-specific OAuth logic
-    // Store tokens in your database
-    res.status(200).json({ success: true });
+    // Here you would exchange the code for access tokens
+    // Store the tokens securely in your database
+    // Associate them with the user's account
+
+    // Redirect back to the app
+    res.redirect('/?connection=success');
   } catch (error) {
-    res.status(500).json({ success: false, error: 'Authentication failed' });
+    console.error(`${platform} auth error:`, error);
+    res.redirect('/?connection=failed');
   }
 } 

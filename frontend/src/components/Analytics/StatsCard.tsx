@@ -1,46 +1,97 @@
-import { Box, Stat, StatLabel, StatNumber, StatHelpText, StatArrow, Flex, useColorMode } from '@chakra-ui/react';
+import {
+  Box,
+  Stat,
+  StatLabel,
+  StatNumber,
+  StatHelpText,
+  StatArrow,
+  useColorMode,
+  Icon,
+  HStack
+} from '@chakra-ui/react';
+import { FiBarChart2, FiUsers, FiTrendingUp, FiFileText } from 'react-icons/fi';
+import { motion } from 'framer-motion';
+
+const MotionBox = motion(Box);
 
 interface StatsCardProps {
   title: string;
-  stat: number;
-  change: number;
-  icon: string;
+  value: number | string;
+  icon?: string;
+  change?: number;
 }
 
-const StatsCard = ({ title, stat, change, icon }: StatsCardProps) => {
+const StatsCard = ({ title, value, icon, change }: StatsCardProps) => {
   const { colorMode } = useColorMode();
+  const isDark = colorMode === 'dark';
+
+  const getIcon = (iconName: string) => {
+    switch (iconName) {
+      case 'posts':
+        return FiFileText;
+      case 'engagement':
+        return FiBarChart2;
+      case 'reach':
+        return FiUsers;
+      case 'growth':
+        return FiTrendingUp;
+      default:
+        return FiBarChart2;
+    }
+  };
+
+  const formatValue = (val: number | string) => {
+    if (typeof val === 'number') {
+      return val.toLocaleString();
+    }
+    return val;
+  };
 
   return (
-    <Box 
-      p={6} 
-      bg={colorMode === 'dark' ? 'gray.800' : 'white'} 
-      rounded="xl" 
-      shadow="sm"
-      mb={4}
-      border="1px"
-      borderColor={colorMode === 'dark' ? 'gray.700' : 'gray.100'}
-      transition="all 0.2s"
-      _hover={{
-        transform: 'translateY(-2px)',
-        shadow: 'md',
-      }}
+    <MotionBox
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
     >
-      <Flex align="center" justify="space-between">
+      <Box
+        p={6}
+        bg={isDark ? 'gray.800' : 'white'}
+        rounded="xl"
+        shadow="lg"
+        borderWidth="1px"
+        borderColor={isDark ? 'gray.700' : 'gray.200'}
+        transition="all 0.2s"
+        _hover={{ transform: 'translateY(-2px)', shadow: 'xl' }}
+      >
         <Stat>
-          <StatLabel fontSize="md" color={colorMode === 'dark' ? 'gray.400' : 'gray.500'}>
-            {title}
-          </StatLabel>
+          <HStack spacing={2} mb={2}>
+            {icon && (
+              <Icon
+                as={getIcon(icon)}
+                w={5}
+                h={5}
+                color={isDark ? 'blue.300' : 'blue.500'}
+              />
+            )}
+            <StatLabel fontSize="sm" color={isDark ? 'gray.400' : 'gray.600'}>
+              {title}
+            </StatLabel>
+          </HStack>
           <StatNumber fontSize="3xl" fontWeight="bold">
-            {stat}
+            {formatValue(value)}
           </StatNumber>
-          <StatHelpText>
-            <StatArrow type={change > 0 ? 'increase' : 'decrease'} />
-            {Math.abs(change)}%
-          </StatHelpText>
+          {typeof change === 'number' && (
+            <StatHelpText>
+              <StatArrow 
+                type={change >= 0 ? 'increase' : 'decrease'} 
+                color={change >= 0 ? 'green.400' : 'red.400'}
+              />
+              {Math.abs(change)}%
+            </StatHelpText>
+          )}
         </Stat>
-        <Box fontSize="2xl">{icon}</Box>
-      </Flex>
-    </Box>
+      </Box>
+    </MotionBox>
   );
 };
 
