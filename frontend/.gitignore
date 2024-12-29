@@ -1,0 +1,97 @@
+# Node.js dependencies
+node_modules/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+.next/
+out/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+
+# Coverage files
+coverage/
+
+# Test outputs
+jest-test-results.json
+*.tsbuildinfo
+
+# Dependency directories
+.babel_cache/
+.eslintcache/
+.parcel-cache/
+.cache/
+.pnpm-debug.log
+
+# Next.js specific
+.next/cache/
+.next/static/
+.next/server/
+
+# Miscellaneous
+*.lock
+*.sqlite
+*.sqlite-journal
+*.log
+*.crt
+*.key
+*.pem
+
+# TypeScript specific
+*.d.ts
+*.d.ts.map
+tsconfig.tsbuildinfo
+
+# Storybook files
+storybook-static/
+node_modules/
+.stories.mdx
+
+# Build artifacts
+dist/
+*.out
+*.build
+
+# Temporary files
+*.tmp
+*.temp
+
+# Static generated files
+out/
+export/
+
+# AWS and Terraform specific
+.terraform/
+.terraform.lock.hcl
+
+# Local NPM binaries
+.npmrc
+
+# Package manager lockfiles (optional, based on workflow)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
